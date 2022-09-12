@@ -1,5 +1,8 @@
 #!/bin/sh
-for i in 1 2 3 4 5 6 7 8 9 10
+SERVERS_QUANTITY=1
+echo "Enter number of servers to dump:"
+read SERVERS_QUANTITY
+for i in `seq 1 $SERVERS_QUANTITY`
 do
     echo "Dumping $i server..."
     ./nth-dump.android-arm -format text -noqr >> nth-dump.txt
