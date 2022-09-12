@@ -1,6 +1,6 @@
 #!/bin/sh
-SERVERS_QUANTITY=0
-echo "Enter number of servers: "
+SERVERS_QUANTITY=1
+echo "Enter number of servers:"
 read SERVERS_QUANTITY
 for i in `seq 1 $SERVERS_QUANTITY`
 do
