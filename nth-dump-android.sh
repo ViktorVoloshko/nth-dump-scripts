@@ -7,6 +7,9 @@ do
 	echo "Dumping $i server..."
 	./nth-dump.android-arm -format text -noqr >> nth-dump.txt
 done
-echo "Done dumping. Now moving to Downloads folder."
-mv ./nth-dump.txt ./storage/downloads/nth-dump.txt
+echo "ss:// links extraction..."
+grep -Eo "ss:.+$" ./nth-dump.txt > ./nth-dump-ss.txt
+mv ./nth-dump-ss.txt ./storage/downloads/nth-dump-ss.txt
+echo "Removing temporary files..."
+rm ./nth-dump.txt
 echo "Finished!"
