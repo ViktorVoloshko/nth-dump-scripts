@@ -9,7 +9,6 @@ do
 done
 echo "ss:// links extraction..."
 grep -Eo "ss:.+$" ./nth-dump-tmp.txt > ./nth-dump-ss.txt
-mv ./nth-dump-ss.txt ./storage/downloads/nth-dump-ss.txt
 echo "Removing temporary files..."
 rm ./nth-dump-tmp.txt
 echo "Finished!"
